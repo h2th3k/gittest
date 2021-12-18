@@ -35,4 +35,18 @@ Changes to be committed:
 
         new file:   testfile
 ```
-Basically telling you the untracked file changes the status from `untracked` to `new file` and waiting to be commited to the repo. 
+Basically telling you the untracked file changes the status from `untracked` to `new file` and waiting to be commited to the repo. Also if the file is already in the repo directory, then by using `git add` will also show this msg directly.
+
+If you modified any files, you could do a quick check which files are modified also by using `git status` and you can get the following info:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+``` 
