@@ -1,5 +1,5 @@
 # Gittest
-Testing for all git operations
+Testing for all git operations, for practicing and improving git skills.
 
 ## Basic Operations
 ```
