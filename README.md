@@ -7,8 +7,10 @@ git clone <repo_address>
 git add <file/foldername> (inside the git repo)
 git commit -m 'commit_msg'
 git push
+git branch <branch_name>
+git checkout <branch_name> (switch to the branch)
 ```
-## Use cases
+## Basic Use cases
 Add a file to the repo
 ```
 cp ~/testfile ./ ($pwd is the repo)
@@ -78,4 +80,10 @@ Untracked files:
         .README.md.swp
 
 no changes added to commit (use "git add" and/or "git commit -a")
-``` 
+```
+If you want to create a new branch, you can use `git branch node01` and switch to the branch by using `git checkout node01`.
+
+
+## Advance operations
+```
+ 
