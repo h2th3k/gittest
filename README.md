@@ -12,10 +12,8 @@ git branch <branch_name>
 git checkout <branch_name> (switch to the branch)
 ```
 ## Basic Use Cases
-=======
 ```
 ## Use cases
->>>>>>> parent of a6985c6... dsa
 Add a file to the repo
 ```
 cp ~/testfile ./ ($pwd is the repo)
@@ -111,13 +109,5 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 The solution of the conflict is that to mannully review the files or folder causing the conflict and change what is nessary. Normally, git will add mark in the files that causes conflict, and it looks like this:
 ```
-  1 <<<<<<< HEAD
-  2 dsadasdas
-  3 =======
-  4 dasdas
-  5 >>>>>>> node01
-```
 `HEAD` indicates the changes are done by main, and node01 indicates the changes are done by subbranch. Remove or keep the changes base on your needs. After change you can use `git add` and `git commit` and `git push` to complete the merge.     
-=======
 ``` 
->>>>>>> parent of a6985c6... dsa
