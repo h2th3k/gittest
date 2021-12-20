@@ -29,9 +29,9 @@ Untracked files:
         testfile
 
 nothing added to commit but untracked files present (use "git add" to track)
-```
+
 After you using `git add testfile` (which will add the file to the repo) you will see the following information:
-```
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -39,7 +39,7 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
         new file:   testfile
-```
+
 Basically telling you the untracked file changes the status from `untracked` to `new file` and waiting to be commited to the repo. Also if the file is already in the repo directory, then by using `git add` will also show this msg directly.
 
 If you modified any files, you could do a quick check which files are modified also by using `git status` and you can get the following info:
@@ -102,6 +102,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 When you add create a file with name 1 and push to the main repo and another guy create a same file push to the subbranch repo, this will cause conflict as well and the info will show like this:
+  
 ```
 Auto-merging 2
 CONFLICT (add/add): Merge conflict in 2
@@ -110,8 +111,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 The solution of the conflict is that to mannully review the files or folder causing the conflict and change what is nessary. Normally, git will add mark in the files that causes conflict, and it looks like this:
 ```
 `HEAD` indicates the changes are done by main, and node01 indicates the changes are done by subbranch. Remove or keep the changes base on your needs. After change you can use `git add` and `git commit` and `git push` to complete the merge.     
- 
-## Advance Usage
+ ```
+## Advance Use Case2
 When both main branch and sub-branch changes the same file and pushed to the repo, this will cause conflict as mentioned above, when conflict happens you can use `git log` to see the log info, usually log info shows both of the sub-branch and main branch status. But under this case, the log will not show up the other one. A resolution will be using `git diff` to show which files different, and modify manually.
 
 Difference will show like below:
@@ -133,7 +134,7 @@ That is because the `HEAD` pointing to the sub-branch which is (multiple) commit
 ```
 commit 896af5bdb7924bb8ad195a2d12fc604cc1496ce2 (HEAD -> node01, origin/node01)                                                                                                                                     
 commit 0b5046ce8a15cbf1125125ee8edc2de0e74a95c2 (origin/main, origin/HEAD, main)
-``` 
+```
 In this case, if you want to keep main branch as the correct status, and in case you deleted files in the sub-branch and made current node of sub-branch ahead of main then be careful not use merge in main. Because this will apply the deletion on main as well. A resolution is to reset your branch node to the same node as main.
 ```
 git reset --hard main //reset to main node
