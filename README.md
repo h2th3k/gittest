@@ -114,4 +114,12 @@ The solution of the conflict is that to mannully review the files or folder caus
 ## Advance Usage
 When both main branch and sub-branch changes the same file and pushed to the repo, this will cause conflict as mentioned above, when conflict happens you can use `git log` to see the log info, usually log info shows both of the sub-branch and main branch status. But under this case, the log will not show up the other one. A resolution will be using `git diff` to show which files different, and modify manually.
 
-Difference will show as  
+Difference will show as
+```
+Tuesday ---> same content between main and sub-branch
+<<<<<<< HEAD
+Wednesday ---> current content pointed by  head at sub-branch
+=======
+Monday ---> current content at main branch
+>>>>>>> main
+``` 
