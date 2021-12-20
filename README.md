@@ -123,11 +123,16 @@ Wednesday ---> current content pointed by  head at sub-branch
 Monday ---> current content at main branch
 >>>>>>> main
 ```
-After resolve the difference, the confict will be gone. And if you do `git log` again, you can see the log info showing both main and sub-branch again.
+After resolving the difference, the confict will be gone. And if you do `git log` again, you can see the log info showing both main and sub-branch again.
 
-Sometimes when you go `git log` you can will get
+Sometimes when you go `git merge main` you can will get
 ```
 Already up to date.
 ```
-
+That is because the `HEAD` pointing to the sub-branch which is (multiple) commits ahead of the main, and usually after a successful merge, you add something on the sub-branch which is not updated on the main branch yet, if you do `git log` you can see it more clearer.
+```
+commit 896af5bdb7924bb8ad195a2d12fc604cc1496ce2 (HEAD -> node01, origin/node01)                                                                                                                                     
+commit 0b5046ce8a15cbf1125125ee8edc2de0e74a95c2 (origin/main, origin/HEAD, main)
+``` 
+In this case, if you want to keep main branch as the correct status, and in case you deleted files in the sub-branch and made current node of sub-branch ahead of main then be careful not use merge in main. Because this will apply the deletion on main as well. A resolution is to revert your branch node to the previous status.
 
