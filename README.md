@@ -139,5 +139,5 @@ In this case, if you want to keep main branch as the correct status, and in case
 git reset --hard main //reset to main node
 git push -f origin //force push to remote
 ```
-if the local branch is already deleted, you can use `git push -f origin`
+If the local branch is already deleted, you can use `git push -f origin` to recover the files. And after 
 
