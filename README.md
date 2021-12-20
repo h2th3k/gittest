@@ -11,9 +11,7 @@ git push
 git branch <branch_name>
 git checkout <branch_name> (switch to the branch)
 ```
-## Basic Use Cases
-```
-## Use cases
+## Basic Use cases
 Add a file to the repo
 ```
 cp ~/testfile ./ ($pwd is the repo)
@@ -29,9 +27,9 @@ Untracked files:
         testfile
 
 nothing added to commit but untracked files present (use "git add" to track)
-
+```
 After you using `git add testfile` (which will add the file to the repo) you will see the following information:
-
+```
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -39,7 +37,7 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
         new file:   testfile
-
+```
 Basically telling you the untracked file changes the status from `untracked` to `new file` and waiting to be commited to the repo. Also if the file is already in the repo directory, then by using `git add` will also show this msg directly.
 
 If you modified any files, you could do a quick check which files are modified also by using `git status` and you can get the following info:
@@ -140,5 +138,5 @@ In this case, if you want to keep main branch as the correct status, and in case
 git reset --hard main //reset to main node
 git push -f origin //force push to remote
 ```
-If the local branch is already deleted, you can use `git push -f origin` to recover the files, this basically pushes the local branch master, but names it sub-branch on the remote. Then using `add .` to add the files back to local branch.
+If the local branch is already deleted, you can use `git push -f origin main:branch_name` to recover the files, this basically pushes the local branch master, but names it sub-branch on the remote. Then using `add .` to add the files back to local branch.
 
