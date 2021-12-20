@@ -134,5 +134,10 @@ That is because the `HEAD` pointing to the sub-branch which is (multiple) commit
 commit 896af5bdb7924bb8ad195a2d12fc604cc1496ce2 (HEAD -> node01, origin/node01)                                                                                                                                     
 commit 0b5046ce8a15cbf1125125ee8edc2de0e74a95c2 (origin/main, origin/HEAD, main)
 ``` 
-In this case, if you want to keep main branch as the correct status, and in case you deleted files in the sub-branch and made current node of sub-branch ahead of main then be careful not use merge in main. Because this will apply the deletion on main as well. A resolution is to revert your branch node to the previous status.
+In this case, if you want to keep main branch as the correct status, and in case you deleted files in the sub-branch and made current node of sub-branch ahead of main then be careful not use merge in main. Because this will apply the deletion on main as well. A resolution is to reset your branch node to the same node as main.
+```
+git reset --hard main //reset to main node
+git push -f origin //force push to remote
+```
+if the local branch is already deleted, you can use `git push -f origin`
 
