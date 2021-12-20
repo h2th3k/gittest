@@ -110,7 +110,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 The solution of the conflict is that to mannully review the files or folder causing the conflict and change what is nessary. Normally, git will add mark in the files that causes conflict, and it looks like this:
 ```
 `HEAD` indicates the changes are done by main, and node01 indicates the changes are done by subbranch. Remove or keep the changes base on your needs. After change you can use `git add` and `git commit` and `git push` to complete the merge.     
-``` 
+ 
 ## Advance Usage
 When both main branch and sub-branch changes the same file and pushed to the repo, this will cause conflict as mentioned above, when conflict happens you can use `git log` to see the log info, usually log info shows both of the sub-branch and main branch status. But under this case, the log will not show up the other one. A resolution will be using `git diff` to show which files different, and modify manually.
 
