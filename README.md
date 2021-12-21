@@ -123,7 +123,7 @@ Monday ---> current content at main branch
 ```
 After resolving the difference, the confict will be gone. And if you do `git log` again, you can see the log info showing both main and sub-branch again.
 
-Sometimes when you go `git merge main` you can will get
+Sometimes when you go `git merge main` you can still get
 ```
 Already up to date.
 ```
