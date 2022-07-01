@@ -1,0 +1,44 @@
+Benchmarks,600.perlbench_s,602.gcc_s,605.mcf_s,620.omnetpp_s,623.xalancbmk_s,625.x264_s,641.leela_s,657.xz_s,631.deepsjeng_s,
+no asan round 1,124.00,0.05,118.00,34.70,0.68,221.00,30.50,60.80,out of memory,
+no asan round 2,127.00,0.05,115.00,33.00,0.67,221.00,30.40,61.30,out of memory,
+no asan round 3,127.00,0.06,114.00,33.10,0.66,221.00,33.80,65.30,out of memory,
+no asan round 4,126.00,0.05,114.00,32.80,0.66,220.00,30.40,62.50,out of memory,
+no asan round 5,126.00,0.05,115.00,32.60,0.68,221.00,30.40,60.10,out of memory,
+vanila asan round 1,609.00,0.20,211.00,267.00,2.20,683.00,79.80,131.00,out of memory,
+vanila asan round 2,602.00,0.20,210.00,308.00,2.17,681.00,79.90,129.00,out of memory,
+vanila asan round 3,603.00,0.22,210.00,307.00,2.17,682.00,79.50,129.00,out of memory,
+vanila asan round 4,608.00,0.20,211.00,307.00,2.15,683.00,79.90,129.00,out of memory,
+vanila asan round 5,605.00,0.20,211.00,321.00,2.19,681.00,79.40,130.00,out of memory,
+decouple asan round 1,3544.00,9.79,178.00,1031.00,11.30,364.00,66.50,204.00,,
+decouple asan round 2,3544.00,9.80,173.00,990.00,11.30,363.00,66.10,204.00,,
+decouple asan round 3,3537.00,9.81,171.00,1014.00,11.20,364.00,66.20,204.00,,
+decouple asan round 4,3544.00,9.78,172.00,1019.00,11.30,365.00,66.30,204.00,,
+decouple asan round 5,3540.00,9.79,171.00,970.00,11.20,364.00,66.20,204.00,,
+decouple asan(only function) round 1,1070.00,1.36,217.00,376.00,6.03,884.00,107.00,280.00,out of memory,
+decouple asan(only function) round 2,1063.00,0.72,220.00,351.00,5.81,886.00,107.00,276.00,out of memory,
+decouple asan(only function) round 3,1053.00,0.73,215.00,393.00,5.54,886.00,108.00,276.00,out of memory,
+decouple asan(only function) round 4,1067.00,0.72,214.00,376.00,7.02,884.00,107.00,277.00,out of memory,
+decouple asan(only function) round 5,1058.00,0.74,216.00,362.00,5.61,884.00,107.00,277.00,out of memory,
+,,,,,,,,,,
+,,,,,,,,,,
+no asan AVG,126.00,0.05,115.20,33.24,0.67,220.80,31.10,62.00,,
+vanila asan AVG,605.40,0.21,210.60,302.00,2.18,682.00,79.70,129.60,,
+decouple asan AVG,3541.80,9.79,173.00,1004.80,11.26,364.00,66.26,204.00,,
+decouple asan(only uses function) AVG,1062.20,0.85,216.40,371.60,6.00,884.80,107.20,277.20,,
+,,,,,,,,,,
+no asan STDEV,1.22,0.00,1.64,0.84,0.01,0.45,1.51,2.04,,
+vanila asan STDEV,3.05,0.01,0.55,20.45,0.02,1.00,0.23,0.89,,
+decouple asan STDEV,3.19,0.01,2.92,24.51,0.05,0.71,0.15,0.00,,
+decouple asan(only function) STDEV,6.83,0.28,2.30,15.92,0.60,1.10,0.45,1.64,,
+,,,,,,,,,,
+Comparison,600.perlbench_s,602.gcc_s,605.mcf_s,620.omnetpp_s,623.xalancbmk_s,625.x264_s,641.leela_s,657.xz_s,,AVG Overhead
+no asan ,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,,1.00
+vanila asan,4.80,3.87,1.83,9.09,3.26,3.09,2.56,2.09,,3.82
+decouple asan,28.11,183.96,1.50,30.23,16.86,1.65,2.13,3.29,,33.47
+decouple asan with only function,8.43,16.03,1.88,11.18,8.99,4.01,3.45,4.47,,7.30
+,,,,,,,,,,
+Comparison,600.perlbench_s,602.gcc_s,605.mcf_s,620.omnetpp_s,623.xalancbmk_s,625.x264_s,641.leela_s,657.xz_s,,AVG Overhead
+no asan ,0.21,0.26,0.55,0.11,0.31,0.32,0.39,0.48,,0.33
+vanila asan,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,,1.00
+decouple asan,5.85,47.54,0.82,3.33,5.17,0.53,0.83,1.57,,8.21
+decouple asan with only function,1.75,4.14,1.03,1.23,2.76,1.30,1.35,2.14,,1.96
